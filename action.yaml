@@ -1,0 +1,18 @@
+name: 'Publish python package'
+description: 'Publishes python packages that use poetry'
+inputs:
+  pypi_username:
+    description: 'pypi username'
+    required: true
+  pypi_password:
+    description: 'pypi password'
+    required: true
+branding:
+  color: yellow
+  icon: upload-cloud
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - ${{ inputs.pypi_username }}
+  - ${{ inputs.pypi_password }}
