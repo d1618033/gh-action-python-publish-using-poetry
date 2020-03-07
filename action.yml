@@ -1,4 +1,5 @@
 name: 'Publish python package'
+author: 'David S.'
 description: 'Publishes python packages that use poetry'
 inputs:
   pypi_username:
