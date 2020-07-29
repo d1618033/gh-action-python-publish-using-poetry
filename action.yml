@@ -8,6 +8,14 @@ inputs:
   pypi_password:
     description: 'pypi password'
     required: true
+  poetry_build_args:
+    description: 'additional arguments to send to poetry build'
+    required: false
+    default: ''
+  twine_upload_args:
+    description: 'additional arguments to send to twine upload'
+    required: false
+    default: ''
 branding:
   color: yellow
   icon: upload-cloud
@@ -17,3 +25,5 @@ runs:
   args:
   - ${{ inputs.pypi_username }}
   - ${{ inputs.pypi_password }}
+  - ${{ inputs.poetry_build_args }}
+  - ${{ inputs.twine_upload_args }}

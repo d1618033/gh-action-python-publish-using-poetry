@@ -30,3 +30,13 @@ Usage
     ```
 1. Go to Code/releases and draft a new release.
     1. The tag version will become the python package version.
+
+If there are additional arguments you want to pass to the `build` or `upload` commands simply add:
+
+        - name: Build and publish
+          uses: d1618033/gh-action-python-publish-using-poetry@master
+          with:
+            pypi_username: ${{ secrets.PYPI_USERNAME }}
+            pypi_password: ${{ secrets.PYPI_PASSWORD }}
+            poetry_build_args: '-f sdist'
+            twine_upload_args: '-r myrepo'
