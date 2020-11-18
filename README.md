@@ -4,7 +4,7 @@ Github action which versions, builds and publishes python packages that use poet
 Usage
 -----
 
-1. Go to settings/secrets and add two secrets: PYPI_USERNAME and PYPI_USERNAME
+1. Go to settings/secrets and add two secrets: PYPI_USERNAME and PYPI_PASSWORD
 1. Add a workflow:  
     ```yaml
     name: Upload Python Package
